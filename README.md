@@ -1,4 +1,4 @@
-This is how I'm leaning (learned) Express JS based on the developer.mozilla.org tutorials. Thank you guys! :^)
+This is how I'm learning (learned) Express JS based on the developer.mozilla.org tutorials. Thank you guys! :^)
 ===========================================================================================================================
 ===========================================================================================================================
 
@@ -37,6 +37,6 @@ This is how I'm leaning (learned) Express JS based on the developer.mozilla.org 
 
 -The 'express-generator' package automatically creates a skeleton of an express app following the MVC pattern using 'express <<appname>>' and you can add some extra options like adding templates engine (--pug).
 
-*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
 =============================================================================================================================*
 
