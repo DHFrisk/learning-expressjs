@@ -22,5 +22,21 @@ This is how I'm leaning (learned) Express JS based on the developer.mozilla.org 
 
 -Template engines (which are the referred to as 'view engines' by express) allows to specify the structure of an output document in a template, using placeholders for the data and those will be filled when the template is generated/rendered.
 
-All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
-=============================================================================================================================
+*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+=============================================================================================================================*
+
+-Basically just explaining some things that they used in previous section (introduction) like how installing node and npm packages, setting up the port, hostname, listening to the port and so on.
+
+-You must use 'npm init' to initialize your node project, and this will create a 'package.json' in which you can specify your dependencies, version of your project.
+
+-You can install packages locally only for that project (npm install <<package>>).
+
+-You can install node packages but no use them in production or later by installing them just for developing phase (npm install <<package>> --save-dev).
+
+-You can also define named or specific scripts in 'package.json' and call npm to execute them with the 'run-script' command.
+
+-The 'express-generator' package automatically creates a skeleton of an express app following the MVC pattern using 'express <<appname>>' and you can add some extra options like adding templates engine (--pug).
+
+*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+=============================================================================================================================*
+
