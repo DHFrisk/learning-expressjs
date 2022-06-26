@@ -1,6 +1,6 @@
 This is how I'm learning (learned) Express JS based on the developer.mozilla.org tutorials. Thank you guys! :^)
 ===========================================================================================================================
-===========================================================================================================================
+## Introduction
 
 - Express is a module from node, and is unopinionated which means you can do one thing in so many ways and you decide which to use!
 
@@ -22,8 +22,9 @@ This is how I'm learning (learned) Express JS based on the developer.mozilla.org
 
 - Template engines (which are the referred to as 'view engines' by express) allows to specify the structure of an output document in a template, using placeholders for the data and those will be filled when the template is generated/rendered.
 
-*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
-=============================================================================================================================*
+*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction*
+
+## Setting up environment
 
 - Basically just explaining some things that they used in previous section (introduction) like how installing node and npm packages, setting up the port, hostname, listening to the port and so on.
 
@@ -37,6 +38,40 @@ This is how I'm learning (learned) Express JS based on the developer.mozilla.org
 
 - The 'express-generator' package automatically creates a skeleton of an express app following the MVC pattern using 'express <<appname>>' and you can add some extra options like adding templates engine (--pug).
 
-*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
-=============================================================================================================================*
+*All of the above was written based on what I was doing while I followed the tutorial from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment*
 
+## Local Library Tutorial
+
+### Part 1 and 2 (generating and explaining the basics)
+
+The first part of the tutorial part wasn't really practicing, so the following was while going through second part.
+
+1.  Install express-generator in order to generate Express app: ```npm install express-generator -g``` 
+
+2. Generate express app with default template view engine (Pug, now renamed Jade) inside the tutorial folder ```express tutorial-local_library_website --view=pug```. Then go into the created directory and install dependencies: ```npm install``` and run the app ```DEBUG=tutorial-local_library_website:* npm start```. Also specifying DEBUG variable is not necessary but it will enable console logging/debugging.
+
+3. In order to not restart the server every time a file changes we will use **nodemon** as a developer dependency: ```npm install --save-dev nodemon``` 
+
+4. Because we installed **nodemon** as developer dependency it won't be recognized by bash/zsh/(whatever you use) so we will modify ```package.json``` file to make it start (because **npm** knows everything about installed packages) and by the way we will also automate setting **DEBUG** variable. So inside ```package.json``` modify ```scripts``` section:
+
+   ```
+   // so originally it is like this
+   "scripts": {
+       "start": "node ./bin/www",
+     },
+   
+   // and it will end looking like the following
+   "scripts": {
+       "start": "node ./bin/www",
+       "devstart": "nodemon ./bin/www",
+       "serverstart": "DEBUG=tutorial-local_library_website:* npm run devstart"
+     },
+   ```
+
+5. So previously we just created or defined new scripts in order to node to recognize them, so now we can start the server by running: ```npm run serverstart```.
+   - Note: The ```/bin/www``` file is the real entry point to the app.
+6. They explain the basic structure of default generated files, then there is a challenge to create a new route ```/users/cool/``` that displays *You're so cool*.
+
+*Reference: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website* 
+
+### Part 3 (DB with Mongoose)
